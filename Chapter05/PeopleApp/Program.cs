@@ -63,7 +63,7 @@ steven.Name = "Steven";
 bill.Children.Add(steven); // bills children list
 
 // child of bill C# 9 and later syntax
-bill.Children.Add(new() {Name = "Bethanie" });
+bill.Children.Add(new() { Name = "Bethanie" });
 bill.Children.Add(new() { Name = "Kathryn" });
 WriteLine($"\n{bill.Name} has {bill.Children.Count} children:");
 // loop thru children list
@@ -72,14 +72,13 @@ for (int childIndex = 0; childIndex < bill.Children.Count; childIndex++)
     WriteLine($"{bill.Children[childIndex].Name}");
 }
 
-
 // child of lisa
 Person paul = new Person();
 paul.Name = "Paul";
 lisa.Children.Add(paul);
 
 // child of lisa C# 9 and later syntax
-lisa.Children.Add(new() {Name = "Mary Lou" });
+lisa.Children.Add(new() { Name = "Mary Lou" });
 WriteLine($"\n{lisa.Name} has {lisa.Children.Count} children:");
 // loop thru children list
 foreach (var child in lisa.Children)
@@ -114,7 +113,16 @@ WriteLine($"{lisa.Name} was born on {lisa.HomePlanet}");
 #endregion
 
 #region Required - requireing fields to be set during instantiation
-Book book = new() { Isbn = "978-0-321-87758-1", Title = "Professional C# .Net 8" };  // Isbn & Title are required
-WriteLine($"\n{book.Title} was written by {book.Author="Unknown"}, has {book.PageCount=325} pages and an ISBN of {book.Isbn}");
+Book someBook = new() { Isbn = "978-0-321-87758-1", Title = "Professional C# .Net 8" };  // Isbn & Title are required
+WriteLine($"\n{someBook.Title} was written by {someBook.Author = "Unknown"}, has {someBook.PageCount = 325} pages and an ISBN of {someBook.Isbn}");
+Book anotherBook = new(isbn: "000-0-000-00000-0", title: "Empty Record") { Author = "Pseudonym", PageCount = 0 };
+WriteLine($"{anotherBook.Title} was written by {anotherBook.Author}, has {anotherBook.PageCount} pages and an ISBN of {anotherBook.Isbn}");
+#endregion
 
+#region initialize fields using constructors
+Person emptyPerson = new();  // calls the default constructor
+WriteLine($"{emptyPerson.Name}, born on {emptyPerson.HomePlanet} was created at {emptyPerson.CreationStamp:hh:mm:ss} on a {emptyPerson.CreationStamp:dddd}.");
+
+Person jimmy = new(initialName: "Jimmy", homePlanet: "Mars");
+WriteLine($"{jimmy.Name}, born on {jimmy.HomePlanet} was created at {jimmy.CreationStamp:hh:mm:ss} on a {jimmy.CreationStamp:dddd}.");
 #endregion

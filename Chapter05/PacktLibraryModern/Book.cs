@@ -1,4 +1,5 @@
-﻿namespace Packt.Shared;
+﻿using System.Diagnostics.CodeAnalysis; // to use [SetsRequiredMembers]
+namespace Packt.Shared;
 
 public class Book
 {
@@ -9,5 +10,15 @@ public class Book
     // works with all versions
     public string? Author;
     public int? PageCount;
+
+    // constructor for use with obj initializer syntax
+    public Book() { }
+
+    // constructor with decorator and params to set required fields
+    [SetsRequiredMembers]
+    public Book(string? isbn, string? title) {
+        Isbn = isbn;
+        Title = title;
+    }
 }
 
