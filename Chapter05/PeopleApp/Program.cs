@@ -64,7 +64,13 @@ bill.Children.Add(steven); // bills children list
 
 // child of bill C# 9 and later syntax
 bill.Children.Add(new() {Name = "Bethanie" });
-WriteLine($"{bill.Name} has {bill.Children.Count} children.");
+bill.Children.Add(new() { Name = "Kathryn" });
+WriteLine($"\n{bill.Name} has {bill.Children.Count} children:");
+// loop thru children list
+for (int i = 0; i < bill.Children.Count; i++)
+{
+    WriteLine($"{bill.Children[i].Name}");
+}
 
 
 // child of lisa
@@ -74,5 +80,10 @@ lisa.Children.Add(paul);
 
 // child of lisa C# 9 and later syntax
 lisa.Children.Add(new() {Name = "Mary Lou" });
-WriteLine($"{lisa.Name} has {lisa.Children.Count} children.");
+WriteLine($"\n{lisa.Name} has {lisa.Children.Count} children:");
+// loop thru children list
+foreach (var item in lisa.Children)
+{
+    WriteLine(item.Name);
+}
 #endregion
