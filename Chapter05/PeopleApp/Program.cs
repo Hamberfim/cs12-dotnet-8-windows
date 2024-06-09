@@ -92,5 +92,15 @@ foreach (var child in lisa.Children)
 // store the shared value in the static field
 BankAccount.InterestRate = 0.012M;
 
+//  sett up BankAccount instances
+BankAccount smithAccount = new();
+smithAccount.AccountName = "Mr. Bill Smith";
+smithAccount.Balance = 2400;
+WriteLine($"{smithAccount.AccountName} has earned {(smithAccount.Balance * BankAccount.InterestRate):C} interest.");
+
+BankAccount brownAccount = new();
+brownAccount.AccountName = "Mrs. Lisa Brown";
+brownAccount.Balance = 98;
+WriteLine($"{brownAccount.AccountName} has earned {(brownAccount.Balance * BankAccount.InterestRate):C} interest.");
 
 #endregion
