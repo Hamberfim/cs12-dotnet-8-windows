@@ -87,3 +87,10 @@ foreach (var child in lisa.Children)
     WriteLine(child.Name);
 }
 #endregion
+
+#region static member to share one value across all instances
+// store the shared value in the static field
+BankAccount.InterestRate = 0.012M;
+
+
+#endregion
