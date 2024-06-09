@@ -67,9 +67,9 @@ bill.Children.Add(new() {Name = "Bethanie" });
 bill.Children.Add(new() { Name = "Kathryn" });
 WriteLine($"\n{bill.Name} has {bill.Children.Count} children:");
 // loop thru children list
-for (int i = 0; i < bill.Children.Count; i++)
+for (int childIndex = 0; childIndex < bill.Children.Count; childIndex++)
 {
-    WriteLine($"{bill.Children[i].Name}");
+    WriteLine($"{bill.Children[childIndex].Name}");
 }
 
 
