@@ -102,5 +102,13 @@ BankAccount brownAccount = new();
 brownAccount.AccountName = "Mrs. Lisa Brown";
 brownAccount.Balance = 98;
 WriteLine($"{brownAccount.AccountName} has earned {(brownAccount.Balance * BankAccount.InterestRate):C} interest.");
+#endregion
 
+#region Constant fields are accessible via the type
+WriteLine($"{bill.Name} is a {Person.Species}.");
+WriteLine($"{lisa.Name} is a {Person.Species}.");
+
+// readonly fields are accessible via the variable
+WriteLine($"{bill.Name} was born on {bill.HomePlanet}");
+WriteLine($"{lisa.Name} was born on {lisa.HomePlanet}");
 #endregion

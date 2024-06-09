@@ -12,5 +12,11 @@ public class Person
 
     // store multiple Persons instances
     public List<Person> Children = new();
+
+    // constants
+    public const string Species = "Homo Sapiens";
+
+    // read only
+    public readonly string HomePlanet = "Earth";
     #endregion
 }
