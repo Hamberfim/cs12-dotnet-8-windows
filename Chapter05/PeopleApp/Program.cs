@@ -105,10 +105,16 @@ WriteLine($"{brownAccount.AccountName} has earned {(brownAccount.Balance * BankA
 #endregion
 
 #region Constant fields are accessible via the type
-WriteLine($"{bill.Name} is a {Person.Species}.");
+WriteLine($"\n{bill.Name} is a {Person.Species}.");
 WriteLine($"{lisa.Name} is a {Person.Species}.");
 
 // readonly fields are accessible via the variable
-WriteLine($"{bill.Name} was born on {bill.HomePlanet}");
+WriteLine($"\n{bill.Name} was born on {bill.HomePlanet}");
 WriteLine($"{lisa.Name} was born on {lisa.HomePlanet}");
+#endregion
+
+#region Required - requireing fields to be set during instantiation
+Book book = new() { Isbn = "978-0-321-87758-1", Title = "Professional C# .Net 8" };  // Isbn & Title are required
+WriteLine($"\n{book.Title} was written by {book.Author="Unknown"}, has {book.PageCount=325} pages and an ISBN of {book.Isbn}");
+
 #endregion
