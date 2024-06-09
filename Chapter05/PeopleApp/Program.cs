@@ -82,8 +82,8 @@ lisa.Children.Add(paul);
 lisa.Children.Add(new() {Name = "Mary Lou" });
 WriteLine($"\n{lisa.Name} has {lisa.Children.Count} children:");
 // loop thru children list
-foreach (var item in lisa.Children)
+foreach (var child in lisa.Children)
 {
-    WriteLine(item.Name);
+    WriteLine(child.Name);
 }
 #endregion
