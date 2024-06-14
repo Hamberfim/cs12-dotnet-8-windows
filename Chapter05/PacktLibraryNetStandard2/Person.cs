@@ -30,10 +30,23 @@ public class Person
         CreationStamp = DateTime.Now;
     }
 
-    public Person(string initialName, string homePlanet) {
+    public Person(string initialName, string homePlanet)
+    {
         Name = initialName;
         HomePlanet = homePlanet;
         CreationStamp = DateTime.Now;
+    }
+    #endregion
+
+    #region Working with methods and tuples : Actions the 'type' can perform
+    public void WriteToConsole()
+    {
+        WriteLine($"{Name} was born on a {Born:dddd}.");
+        //WriteLine($"{Name} was born on a {Born.DayOfWeek}.");
+    }
+
+    public string GetOrigin() {
+        return $"{Name} was born on {HomePlanet}.";
     }
     #endregion
 }

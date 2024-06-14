@@ -126,3 +126,8 @@ WriteLine($"{emptyPerson.Name}, born on {emptyPerson.HomePlanet} was created at 
 Person jimmy = new(initialName: "Jimmy", homePlanet: "Mars");
 WriteLine($"{jimmy.Name}, born on {jimmy.HomePlanet} was created at {jimmy.CreationStamp:hh:mm:ss} on a {jimmy.CreationStamp:dddd}.");
 #endregion
+
+#region Working with methods and tuples : Actions the 'type' can perform
+bill.WriteToConsole();  // void return
+WriteLine(bill.GetOrigin());  // string return
+#endregion
