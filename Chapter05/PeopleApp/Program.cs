@@ -137,3 +137,10 @@ WriteLine(bill.SayHello());
 WriteLine(bill.SayHello("Linda"));  // overloaded method
 WriteLine(bill.SayHelloTwo("Kimberly"));
 #endregion
+
+#region optional parameters
+WriteLine(bill.OptionalParams());
+WriteLine(bill.OptionalParams("Jump!", 99.5));
+// named parameter values -- note out of order
+WriteLine(bill.OptionalParams(decNumber: 33.333, active: false, command: "Stop!"));
+#endregion

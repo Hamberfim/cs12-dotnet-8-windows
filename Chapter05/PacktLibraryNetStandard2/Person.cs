@@ -57,4 +57,11 @@ public class Person
     public string SayHelloTwo(string name) { return $"{Name} says, 'Hello, {name}!'"; }
     #endregion
 
+    #region optional parameters
+    public string OptionalParams(string command = "Run!", double decNumber =0.0, bool active = true) 
+    { 
+        return $"Command: {command}, decNumber: {decNumber:N1}, active: {active}";
+    }
+    #endregion
+
 }
