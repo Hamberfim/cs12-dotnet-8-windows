@@ -134,5 +134,6 @@ WriteLine(bill.GetOrigin());  // string return
 
 #region methods with parameters
 WriteLine(bill.SayHello());
+WriteLine(bill.SayHello("Linda"));  // overloaded method
 WriteLine(bill.SayHelloTwo("Kimberly"));
 #endregion

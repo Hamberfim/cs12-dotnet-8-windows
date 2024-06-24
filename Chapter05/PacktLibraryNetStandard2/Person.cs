@@ -51,8 +51,9 @@ public class Person
     }
     #endregion
 
-    #region methods with parameters
+    #region methods with parameters and overloading methods
     public string SayHello() { return $"{Name} says, 'Hello!'"; }
+    public string SayHello(string name) { return $"{Name} says, 'Hello, {name}!'"; }  // overloaded method
     public string SayHelloTwo(string name) { return $"{Name} says, 'Hello, {name}!'"; }
     #endregion
 
