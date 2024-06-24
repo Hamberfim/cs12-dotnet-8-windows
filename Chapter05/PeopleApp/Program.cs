@@ -131,3 +131,8 @@ WriteLine($"{jimmy.Name}, born on {jimmy.HomePlanet} was created at {jimmy.Creat
 bill.WriteToConsole();  // void return
 WriteLine(bill.GetOrigin());  // string return
 #endregion
+
+#region methods with parameters
+WriteLine(bill.SayHello());
+WriteLine(bill.SayHelloTwo("Kimberly"));
+#endregion

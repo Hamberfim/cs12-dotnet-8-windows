@@ -45,8 +45,15 @@ public class Person
         //WriteLine($"{Name} was born on a {Born.DayOfWeek}.");
     }
 
-    public string GetOrigin() {
+    public string GetOrigin()
+    {
         return $"{Name} was born on {HomePlanet}.";
     }
     #endregion
+
+    #region methods with parameters
+    public string SayHello() { return $"{Name} says, 'Hello!'"; }
+    public string SayHelloTwo(string name) { return $"{Name} says, 'Hello, {name}!'"; }
+    #endregion
+
 }
