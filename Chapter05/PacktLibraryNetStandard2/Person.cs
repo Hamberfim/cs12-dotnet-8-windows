@@ -66,7 +66,7 @@ public class Person
 
     #region Using Tuples for mutiple return values
     public (string, int) GetFruit() { return ("Oranges", 12); }
-    // named tuple field elements
+    // Method named fields
     public (string Name, int Count) GetNamedFruit()
     {
         return (Name: "Kiwi", Count: 9);
