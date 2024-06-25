@@ -58,9 +58,18 @@ public class Person
     #endregion
 
     #region optional parameters
-    public string OptionalParams(string command = "Run!", double decNumber =0.0, bool active = true) 
-    { 
+    public string OptionalParams(string command = "Run!", double decNumber = 0.0, bool active = true)
+    {
         return $"Command: {command}, decNumber: {decNumber:N1}, active: {active}";
+    }
+    #endregion
+
+    #region Using Tuples for mutiple return values
+    public (string, int) GetFruit() { return ("Oranges", 12); }
+    // named tuple field elements
+    public (string Name, int Count) GetNamedFruit()
+    {
+        return (Name: "Kiwi", Count: 9);
     }
     #endregion
 

@@ -144,3 +144,12 @@ WriteLine(bill.OptionalParams("Jump!", 99.5));
 // named parameter values -- note out of order
 WriteLine(bill.OptionalParams(decNumber: 33.333, active: false, command: "Stop!"));
 #endregion
+
+#region Using Tuples for mutiple return values
+(string, int) fruit = bill.GetFruit();
+WriteLine($"We have {fruit.Item2} {fruit.Item1}.");
+// named fields
+// (string Name, int Count) namedFruit = bill.GetNamedFruit();
+var namedFruit = bill.GetNamedFruit();
+WriteLine($"We have {namedFruit.Count} {namedFruit.Name}.");
+#endregion
