@@ -157,3 +157,10 @@ WriteLine($"We have {fruitName}, about {fruitCount}.");
 var namedFruit = bill.GetNamedFruit();
 WriteLine($"We have {namedFruit.Count} {namedFruit.Name}.");
 #endregion
+
+#region deconstruction of objects into parts
+var (name1, dob1) = bill; // implicitly calls the deconstruct method
+WriteLine($"Deconstructed person: {name1}, {dob1}");
+var (name2, dob2, fav2) = bill; // implicitly calls the deconstruct method
+WriteLine($"Deconstructed person: {name2}, {dob2}, {fav2}");
+#endregion
