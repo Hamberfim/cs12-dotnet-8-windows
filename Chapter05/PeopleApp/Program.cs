@@ -37,6 +37,7 @@ bill.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon
 WriteLine($"{bill.Name}'s bucket list is {bill.BucketList}.");
 #endregion
 
+WriteLine();  // space in output
 
 #region create another instance of the Person class setting it's properties using obj init syntax
 // use named object init syntax
@@ -59,6 +60,8 @@ lisa.BucketList = WondersOfTheAncientWorld.ColossusOfRhodes
     | WondersOfTheAncientWorld.GreatPyramidOfGiza;
 WriteLine($"{lisa.Name}'s bucket list is {lisa.BucketList}.");
 #endregion
+
+WriteLine();  // space in output
 
 #region create Person instances and add them to a Children list
 // child of bill
@@ -91,6 +94,8 @@ foreach (var child in lisa.Children)
 }
 #endregion
 
+WriteLine();  // space in output
+
 #region static member to share one value across all instances
 // store the shared value in the static field
 BankAccount.InterestRate = 0.012M;
@@ -107,6 +112,8 @@ brownAccount.Balance = 98;
 WriteLine($"{brownAccount.AccountName} has earned {(brownAccount.Balance * BankAccount.InterestRate):C} interest.");
 #endregion
 
+WriteLine();  // space in output
+
 #region Constant fields are accessible via the type
 WriteLine($"\n{bill.Name} is a {Person.Species}.");
 WriteLine($"{lisa.Name} is a {Person.Species}.");
@@ -116,12 +123,16 @@ WriteLine($"\n{bill.Name} was born on {bill.HomePlanet}");
 WriteLine($"{lisa.Name} was born on {lisa.HomePlanet}");
 #endregion
 
+WriteLine();  // space in output
+
 #region Required - requireing fields to be set during instantiation
 Book someBook = new() { Isbn = "978-0-321-87758-1", Title = "Professional C# .Net 8" };  // Isbn & Title are required
 WriteLine($"\n{someBook.Title} was written by {someBook.Author = "Unknown"}, has {someBook.PageCount = 325} pages and an ISBN of {someBook.Isbn}");
 Book anotherBook = new(isbn: "000-0-000-00000-0", title: "Empty Record") { Author = "Pseudonym", PageCount = 0 };
 WriteLine($"{anotherBook.Title} was written by {anotherBook.Author}, has {anotherBook.PageCount} pages and an ISBN of {anotherBook.Isbn}");
 #endregion
+
+WriteLine();  // space in output
 
 #region initialize fields using constructors
 Person emptyPerson = new();  // calls the default constructor
@@ -131,10 +142,14 @@ Person jimmy = new(initialName: "Jimmy", homePlanet: "Mars");
 WriteLine($"{jimmy.Name}, born on {jimmy.HomePlanet} was created at {jimmy.CreationStamp:hh:mm:ss} on a {jimmy.CreationStamp:dddd}.");
 #endregion
 
+WriteLine();  // space in output
+
 #region Working with methods and tuples : Actions the 'type' can perform
 bill.WriteToConsole();  // void return
 WriteLine(bill.GetOrigin());  // string return
 #endregion
+
+WriteLine();  // space in output
 
 #region methods with parameters
 WriteLine(bill.SayHello());
@@ -142,12 +157,16 @@ WriteLine(bill.SayHello("Linda"));  // overloaded method
 WriteLine(bill.SayHelloTwo("Kimberly"));
 #endregion
 
+WriteLine();  // space in output
+
 #region optional parameters
 WriteLine(bill.OptionalParams());
 WriteLine(bill.OptionalParams("Jump!", 99.5));
 // named parameter values -- note out of order
 WriteLine(bill.OptionalParams(decNumber: 33.333, active: false, command: "Stop!"));
 #endregion
+
+WriteLine();  // space in output
 
 #region Using Tuples for mutiple return values
 (string, int) fruit = bill.GetFruit();
@@ -162,9 +181,13 @@ var namedFruit = bill.GetNamedFruit();
 WriteLine($"We have {namedFruit.Count} {namedFruit.Name}.");
 #endregion
 
+WriteLine();  // space in output
+
 #region deconstruction of objects into parts
 var (name1, dob1) = bill; // implicitly calls the deconstruct method
 WriteLine($"Deconstructed person: {name1}, {dob1}");
 var (name2, dob2, fav2) = bill; // implicitly calls the deconstruct method
 WriteLine($"Deconstructed person: {name2}, {dob2}, {fav2}");
 #endregion
+
+WriteLine();  // space in output
