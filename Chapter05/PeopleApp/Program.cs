@@ -7,12 +7,16 @@ ConfigureConsole();  // sets current culture to default set in Program.Helpers.c
 // ConfigureConsole(culture: "fr-FR");  // French (France)
 #endregion
 
+WriteLine();  // space in output
+
 #region create an instance of the Person class
 // create an instance of the Person class
 Person bill = new();
 // WriteLine(bill.ToString());
 WriteLine(bill);  // implicit call to ToString() --displays console cultural info
 #endregion
+
+WriteLine();  // space in output
 
 #region set properties of the 'bill' instance of the Person class
 bill.Name = "Bill Smith";
